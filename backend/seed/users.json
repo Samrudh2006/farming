@@ -1,0 +1,58 @@
+[
+  {
+    "id": "user-001",
+    "email": "priya.sharma@vit.ac.in",
+    "full_name": "Priya Sharma",
+    "role": "candidate",
+    "college": "VIT Vellore",
+    "password_hash": "$2b$12$placeholder_hash_priya"
+  },
+  {
+    "id": "user-002",
+    "email": "arjun.patel@srmist.edu.in",
+    "full_name": "Arjun Patel",
+    "role": "candidate",
+    "college": "SRM University",
+    "password_hash": "$2b$12$placeholder_hash_arjun"
+  },
+  {
+    "id": "user-003",
+    "email": "sneha.reddy@manipal.edu",
+    "full_name": "Sneha Reddy",
+    "role": "candidate",
+    "college": "MIT Manipal",
+    "password_hash": "$2b$12$placeholder_hash_sneha"
+  },
+  {
+    "id": "user-004",
+    "email": "rahul.kumar@amity.edu",
+    "full_name": "Rahul Kumar",
+    "role": "candidate",
+    "college": "Amity University Noida",
+    "password_hash": "$2b$12$placeholder_hash_rahul"
+  },
+  {
+    "id": "user-005",
+    "email": "ananya.singh@lpu.in",
+    "full_name": "Ananya Singh",
+    "role": "candidate",
+    "college": "LPU Punjab",
+    "password_hash": "$2b$12$placeholder_hash_ananya"
+  },
+  {
+    "id": "user-006",
+    "email": "hiring@techcorp.in",
+    "full_name": "TechCorp Recruiter",
+    "role": "recruiter",
+    "college": null,
+    "password_hash": "$2b$12$placeholder_hash_recruiter"
+  },
+  {
+    "id": "user-007",
+    "email": "admin@isin.in",
+    "full_name": "ISIN Admin",
+    "role": "admin",
+    "college": null,
+    "password_hash": "$2b$12$placeholder_hash_admin"
+  }
+]

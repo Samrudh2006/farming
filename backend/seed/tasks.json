@@ -1,0 +1,157 @@
+[
+  {
+    "id": "task-001",
+    "title": "Build a REST API for User Management",
+    "description": "Create a Flask/FastAPI REST API with CRUD operations for managing users. The API should support creating, reading, updating, and deleting users with proper validation, error handling, and HTTP status codes. Include pagination for the list endpoint.",
+    "task_type": "api",
+    "difficulty": "easy",
+    "language": "python",
+    "time_limit_minutes": 30,
+    "max_score": 100,
+    "starter_code": "from fastapi import FastAPI, HTTPException\nfrom pydantic import BaseModel\nfrom typing import Optional\n\napp = FastAPI()\n\n# In-memory storage\nusers_db = {}\n\nclass UserCreate(BaseModel):\n    name: str\n    email: str\n    age: Optional[int] = None\n\nclass UserUpdate(BaseModel):\n    name: Optional[str] = None\n    email: Optional[str] = None\n    age: Optional[int] = None\n\n# TODO: Implement the following endpoints\n# POST /users - Create a user\n# GET /users - List users (with pagination)\n# GET /users/{user_id} - Get a single user\n# PUT /users/{user_id} - Update a user\n# DELETE /users/{user_id} - Delete a user\n",
+    "test_cases": [
+      {"input": "POST /users {\"name\": \"Amit\", \"email\": \"amit@test.com\"}", "expected": "201 Created"},
+      {"input": "GET /users", "expected": "200 with list"},
+      {"input": "GET /users/nonexistent", "expected": "404 Not Found"},
+      {"input": "PUT /users/{id} {\"name\": \"Updated\"}", "expected": "200 Updated"},
+      {"input": "DELETE /users/{id}", "expected": "204 No Content"}
+    ],
+    "evaluation_rubric": {
+      "correctness": "All 5 CRUD endpoints work correctly",
+      "code_quality": "Clean, readable code with proper naming",
+      "efficiency": "Efficient data operations",
+      "error_handling": "Proper HTTP status codes and error messages",
+      "structure": "Logical code organization",
+      "readability": "Docstrings, type hints used"
+    }
+  },
+  {
+    "id": "task-002",
+    "title": "CSV Data Processor with Analysis",
+    "description": "Write a Python script that reads a CSV file containing student data (name, college, scores in 5 subjects), processes it to calculate averages, ranks students, and outputs a summary report. Handle missing data gracefully.",
+    "task_type": "data_processing",
+    "difficulty": "easy",
+    "language": "python",
+    "time_limit_minutes": 25,
+    "max_score": 100,
+    "starter_code": "import csv\nfrom typing import List, Dict\n\ndef process_student_data(filepath: str) -> Dict:\n    \"\"\"\n    Read student CSV data and return analysis.\n    \n    Expected CSV columns: name, college, math, science, english, hindi, computer\n    \n    Returns:\n        dict with keys:\n        - 'students': list of student dicts with averages\n        - 'top_scorer': name of highest average student\n        - 'subject_averages': dict of subject -> class average\n        - 'college_rankings': dict of college -> average score\n    \"\"\"\n    # TODO: Implement this function\n    pass\n\ndef generate_report(analysis: Dict) -> str:\n    \"\"\"Generate a formatted text report from the analysis.\"\"\"\n    # TODO: Implement this function\n    pass\n",
+    "test_cases": [
+      {"input": "Valid CSV with 10 students", "expected": "Correct averages and rankings"},
+      {"input": "CSV with missing scores", "expected": "Handles gracefully, excludes from avg"},
+      {"input": "Empty CSV", "expected": "Returns empty results without error"},
+      {"input": "generate_report()", "expected": "Formatted string with all metrics"}
+    ],
+    "evaluation_rubric": {
+      "correctness": "Accurate calculations and ranking",
+      "code_quality": "Pythonic code, no redundancy",
+      "efficiency": "Single-pass reading where possible",
+      "error_handling": "Handles missing data, empty files, malformed rows",
+      "structure": "Functions are focused and composable",
+      "readability": "Clear variable names and docstrings"
+    }
+  },
+  {
+    "id": "task-003",
+    "title": "Debug the Broken Authentication Module",
+    "description": "The following authentication module has 5 bugs. Find and fix all of them. The module handles user registration, login, and token validation. Each bug is causing either a security vulnerability or a functional failure.",
+    "task_type": "debugging",
+    "difficulty": "medium",
+    "language": "python",
+    "time_limit_minutes": 35,
+    "max_score": 100,
+    "starter_code": "import hashlib\nimport secrets\nimport time\n\n# BUG 1: Token storage is not thread-safe\ntokens = {}\n\ndef hash_password(password):\n    # BUG 2: Using MD5 (insecure) and no salt\n    return hashlib.md5(password.encode()).hexdigest()\n\ndef register(username, password):\n    # BUG 3: No input validation\n    users_db[username] = hash_password(password)\n    return True\n\ndef login(username, password):\n    stored = users_db.get(username)\n    if stored is None:\n        return None\n    # BUG 4: Timing attack vulnerability\n    if stored == hash_password(password):\n        token = secrets.token_hex(16)\n        # BUG 5: Token never expires\n        tokens[token] = username\n        return token\n    return None\n\ndef validate_token(token):\n    return tokens.get(token)\n\nusers_db = {}\n",
+    "test_cases": [
+      {"input": "Identify all 5 bugs", "expected": "All bugs found and fixed"},
+      {"input": "Password hashing", "expected": "Uses bcrypt/scrypt with salt"},
+      {"input": "Token management", "expected": "Tokens expire, timing-safe comparison"},
+      {"input": "Input validation", "expected": "Username/password validated"},
+      {"input": "Thread safety", "expected": "Concurrent access handled"}
+    ],
+    "evaluation_rubric": {
+      "correctness": "All 5 bugs correctly identified and fixed",
+      "code_quality": "Fixes are production-quality",
+      "efficiency": "No unnecessary performance overhead",
+      "error_handling": "Edge cases covered",
+      "structure": "Clean fix organization",
+      "readability": "Bug explanations in comments"
+    }
+  },
+  {
+    "id": "task-004",
+    "title": "Implement an LRU Cache from Scratch",
+    "description": "Implement a Least Recently Used (LRU) cache class with O(1) get and put operations. The cache should have a fixed capacity and evict the least recently used item when full. Do not use collections.OrderedDict.",
+    "task_type": "algorithm",
+    "difficulty": "medium",
+    "language": "python",
+    "time_limit_minutes": 40,
+    "max_score": 100,
+    "starter_code": "class LRUCache:\n    \"\"\"\n    Implement a Least Recently Used (LRU) Cache.\n    \n    Operations:\n    - get(key) -> value or -1 if not found\n    - put(key, value) -> None (evict LRU if at capacity)\n    \n    Both operations must be O(1).\n    \n    Example:\n        cache = LRUCache(2)\n        cache.put(1, 1)\n        cache.put(2, 2)\n        cache.get(1)      # returns 1\n        cache.put(3, 3)   # evicts key 2\n        cache.get(2)      # returns -1\n    \"\"\"\n    \n    def __init__(self, capacity: int):\n        # TODO: Initialize data structures\n        pass\n    \n    def get(self, key: int) -> int:\n        # TODO: Implement O(1) get\n        pass\n    \n    def put(self, key: int, value: int) -> None:\n        # TODO: Implement O(1) put with eviction\n        pass\n",
+    "test_cases": [
+      {"input": "Basic get/put", "expected": "Correct values returned"},
+      {"input": "Eviction at capacity", "expected": "LRU item evicted"},
+      {"input": "Update existing key", "expected": "Value updated, marked as recent"},
+      {"input": "O(1) time complexity", "expected": "Uses hashmap + doubly linked list"},
+      {"input": "Edge: capacity=1", "expected": "Works correctly"}
+    ],
+    "evaluation_rubric": {
+      "correctness": "All operations produce correct results",
+      "code_quality": "Clean implementation with proper abstractions",
+      "efficiency": "True O(1) for both operations",
+      "error_handling": "Edge cases handled (capacity 0, duplicate keys)",
+      "structure": "Separate Node class, clean DLL implementation",
+      "readability": "Well-commented algorithm explanation"
+    }
+  },
+  {
+    "id": "task-005",
+    "title": "Review and Improve This Database Module",
+    "description": "Review the following database connection module. Identify issues related to security, performance, error handling, and best practices. Provide a refactored version with explanations.",
+    "task_type": "code_review",
+    "difficulty": "hard",
+    "language": "python",
+    "time_limit_minutes": 35,
+    "max_score": 100,
+    "starter_code": "# Review and improve this database module\nimport sqlite3\nimport os\n\nDB_PATH = \"app.db\"\nPASSWORD = \"admin123\"  # Database access password\n\ndef get_connection():\n    conn = sqlite3.connect(DB_PATH)\n    return conn\n\ndef create_user(name, email, role):\n    conn = get_connection()\n    query = f\"INSERT INTO users (name, email, role) VALUES ('{name}', '{email}', '{role}')\"\n    conn.execute(query)\n    conn.commit()\n    conn.close()\n\ndef get_user(user_id):\n    conn = get_connection()\n    result = conn.execute(f\"SELECT * FROM users WHERE id = {user_id}\").fetchone()\n    return result\n\ndef get_all_users():\n    conn = get_connection()\n    results = conn.execute(\"SELECT * FROM users\").fetchall()\n    return results\n\ndef delete_user(user_id):\n    conn = get_connection()\n    conn.execute(f\"DELETE FROM users WHERE id = {user_id}\")\n    conn.commit()\n\ndef search_users(query):\n    conn = get_connection()\n    results = conn.execute(f\"SELECT * FROM users WHERE name LIKE '%{query}%'\").fetchall()\n    return results\n",
+    "test_cases": [
+      {"input": "Security review", "expected": "SQL injection, hardcoded password identified"},
+      {"input": "Resource management", "expected": "Connection pooling or context managers used"},
+      {"input": "Error handling", "expected": "Try/except with proper cleanup"},
+      {"input": "Best practices", "expected": "Parameterized queries, environment variables"},
+      {"input": "Refactored code", "expected": "Production-ready version provided"}
+    ],
+    "evaluation_rubric": {
+      "correctness": "All issues identified, refactored code works",
+      "code_quality": "Refactored code follows best practices",
+      "efficiency": "Connection pooling, efficient queries",
+      "error_handling": "Comprehensive error handling in refactored version",
+      "structure": "Clean architecture with context managers",
+      "readability": "Clear explanations of each issue and fix"
+    }
+  },
+  {
+    "id": "task-006",
+    "title": "Build a Rate Limiter Service",
+    "description": "Implement a rate limiter that uses the sliding window algorithm. It should support configurable limits per user/IP and return appropriate headers (X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset).",
+    "task_type": "api",
+    "difficulty": "hard",
+    "language": "python",
+    "time_limit_minutes": 45,
+    "max_score": 100,
+    "starter_code": "from fastapi import FastAPI, Request, HTTPException\nfrom fastapi.responses import JSONResponse\nimport time\nfrom typing import Optional\n\napp = FastAPI()\n\nclass RateLimiter:\n    \"\"\"\n    Sliding window rate limiter.\n    \n    Args:\n        max_requests: Maximum requests per window\n        window_seconds: Window size in seconds\n    \"\"\"\n    \n    def __init__(self, max_requests: int = 100, window_seconds: int = 60):\n        # TODO: Initialize storage\n        pass\n    \n    def is_allowed(self, client_id: str) -> tuple[bool, dict]:\n        \"\"\"\n        Check if request is allowed.\n        Returns (allowed: bool, headers: dict)\n        \"\"\"\n        # TODO: Implement sliding window\n        pass\n    \n    def get_headers(self, client_id: str) -> dict:\n        \"\"\"Return rate limit headers.\"\"\"\n        # TODO: Return X-RateLimit-* headers\n        pass\n\n# TODO: Create middleware that applies rate limiting\n# TODO: Add endpoints to test the rate limiter\n",
+    "test_cases": [
+      {"input": "Under limit", "expected": "Request allowed, correct headers"},
+      {"input": "At limit", "expected": "429 Too Many Requests"},
+      {"input": "After window reset", "expected": "Requests allowed again"},
+      {"input": "Multiple clients", "expected": "Independent rate limits"},
+      {"input": "Sliding window accuracy", "expected": "Accurate count over sliding window"}
+    ],
+    "evaluation_rubric": {
+      "correctness": "Sliding window algorithm correctly implemented",
+      "code_quality": "Clean, well-organized FastAPI middleware",
+      "efficiency": "Memory-efficient sliding window (not storing all timestamps)",
+      "error_handling": "Graceful handling of edge cases",
+      "structure": "Middleware pattern, separated concerns",
+      "readability": "Algorithm documented with examples"
+    }
+  }
+]

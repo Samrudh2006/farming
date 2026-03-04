@@ -1,0 +1,50 @@
+[
+  {
+    "id": "eval-001",
+    "submission_id": "sub-001",
+    "correctness_score": 85,
+    "code_quality_score": 78,
+    "efficiency_score": 72,
+    "error_handling_score": 80,
+    "structure_score": 82,
+    "readability_score": 88,
+    "total_score": 80.8,
+    "feedback": "Good implementation of the REST API. All CRUD endpoints work correctly. Consider using Pydantic models for response serialization and adding input length validation. Error messages are clear and HTTP status codes are appropriate.",
+    "model_used": "gpt-4o-mini",
+    "prompt_tokens": 1250,
+    "completion_tokens": 320,
+    "cost_usd": 0.0008
+  },
+  {
+    "id": "eval-002",
+    "submission_id": "sub-002",
+    "correctness_score": 92,
+    "code_quality_score": 88,
+    "efficiency_score": 85,
+    "error_handling_score": 90,
+    "structure_score": 86,
+    "readability_score": 91,
+    "total_score": 88.7,
+    "feedback": "Excellent CSV processing implementation. Clean use of the csv module with proper error handling for missing data. The report generator is well-formatted. Minor suggestion: consider using dataclasses for the student records instead of plain dicts.",
+    "model_used": "gpt-4o-mini",
+    "prompt_tokens": 1480,
+    "completion_tokens": 280,
+    "cost_usd": 0.0007
+  },
+  {
+    "id": "eval-003",
+    "submission_id": "sub-003",
+    "correctness_score": 70,
+    "code_quality_score": 65,
+    "efficiency_score": 75,
+    "error_handling_score": 60,
+    "structure_score": 68,
+    "readability_score": 72,
+    "total_score": 68.3,
+    "feedback": "Found 3 out of 5 bugs. Good fix for the SQL injection and MD5 hashing issues. Missed the timing attack vulnerability and token expiration bug. The thread-safety fix using a lock is correct. Add comments explaining why each fix is necessary.",
+    "model_used": "gpt-4o-mini",
+    "prompt_tokens": 1100,
+    "completion_tokens": 350,
+    "cost_usd": 0.0009
+  }
+]

@@ -55,36 +55,113 @@ A skill-based hiring infrastructure platform that replaces traditional resumes w
 
 ---
 
+## Quick Start
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/Samrudh2006/farming.git && cd farming
+
+# 2. Start infrastructure with Docker
+docker-compose up -d db redis
+
+# 3. Backend
+cd backend
+python -m venv venv && venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+cp .env.example .env                           # Edit with your keys
+uvicorn app.main:app --reload
+
+# 4. Frontend (new terminal)
+cd frontend
+npm install
+cp .env.example .env.local
+npm run dev
+```
+
+Open http://localhost:3000 (frontend) and http://localhost:8000/docs (API docs).
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Next.js 15, TypeScript, Tailwind CSS, Framer Motion |
+| Backend | FastAPI, SQLAlchemy (async), PostgreSQL, Alembic |
+| AI | GPT-4o-mini (evaluation), behavioral analysis |
+| Infra | Docker, GitHub Actions CI/CD, Vercel + Railway |
+
+---
+
 ## Project Structure
 
 ```
 ISIN/
-├── README.md                  # Project overview (you are here)
-├── LICENSE                    # Proprietary license
-├── .gitignore                 # Git ignore rules
+├── README.md
+├── LICENSE
+├── .gitignore
+├── docker-compose.yml              # Postgres + Redis + Backend + Judge0
+├── .github/workflows/ci.yml        # CI/CD pipeline
 │
-├── docs/                      # All documentation
-│   ├── PRD.md                 # Product Requirements Document
-│   ├── MVP-PLAN.md            # 3-Month Build Plan
-│   ├── ARCHITECTURE.md        # System Architecture
-│   ├── DATABASE-SCHEMA.md     # PostgreSQL Schema (10 tables)
-│   ├── TECH-STACK.md          # Technology Decisions
-│   ├── API-DESIGN.md          # REST API Specifications
-│   ├── METRICS-AND-RISKS.md   # KPIs & Risk Register
-│   ├── VALIDATION-PLAN.md     # Pre-Build Validation
-│   ├── ROADMAP.md             # Phased Roadmap
-│   ├── COST-OPTIMIZATION.md   # Cost Strategy
-│   ├── ANTI-CHEAT.md          # 5-Signal Detection System
-│   └── ASSET-INDEX.md         # SVG Asset Library Index
+├── docs/                           # 12 documentation files
+│   ├── PRD.md                      # Product Requirements
+│   ├── MVP-PLAN.md                 # 3-Month Build Plan
+│   ├── ARCHITECTURE.md             # System Architecture
+│   ├── DATABASE-SCHEMA.md          # PostgreSQL Schema
+│   ├── TECH-STACK.md               # Technology Decisions
+│   ├── API-DESIGN.md               # REST API Specs
+│   ├── METRICS-AND-RISKS.md        # KPIs & Risks
+│   ├── VALIDATION-PLAN.md          # Pre-Build Validation
+│   ├── ROADMAP.md                  # Phased Roadmap
+│   ├── COST-OPTIMIZATION.md        # Cost Strategy
+│   ├── ANTI-CHEAT.md               # 5-Signal Detection
+│   └── ASSET-INDEX.md              # SVG Asset Index
 │
-└── assets/                    # All SVG visual assets (44 files)
-    ├── logos/                 # Brand logos (4 SVGs)
-    ├── icons/                 # Favicons + task type icons (9 SVGs)
-    ├── backgrounds/           # Page backgrounds (5 SVGs)
-    ├── badges/                # Trust & skill level badges (9 SVGs)
-    ├── illustrations/         # Full-page illustrations (7 SVGs)
-    ├── ui/                    # UI component templates (7 SVGs)
-    └── social/                # OG image, LinkedIn, Twitter cards (3 SVGs)
+├── assets/                         # 44 SVG visual assets
+│   ├── logos/ (4)  ├── icons/ (9)  ├── backgrounds/ (5)
+│   ├── badges/ (9) ├── ui/ (7)    ├── social/ (3)
+│   └── illustrations/ (7)
+│
+├── frontend/                       # Next.js 15 + TypeScript
+│   ├── src/
+│   │   ├── app/                    # Pages (App Router)
+│   │   │   ├── page.tsx            # Landing page with animations
+│   │   │   ├── login/              # Auth pages
+│   │   │   ├── register/
+│   │   │   ├── dashboard/          # Candidate dashboard
+│   │   │   ├── tasks/              # Task listing + [id] detail
+│   │   │   ├── passport/           # Skill Passport view
+│   │   │   └── recruiter/          # Recruiter search
+│   │   ├── components/
+│   │   │   ├── ui/                 # Button, Card, Input, Badge, etc.
+│   │   │   ├── layout/             # Navbar, Footer
+│   │   │   ├── auth/               # Login/Register forms
+│   │   │   ├── task/               # TaskCard
+│   │   │   └── passport/           # PassportCard
+│   │   ├── lib/                    # utils, api client, animations
+│   │   ├── hooks/                  # useTimer, useDebounce, etc.
+│   │   ├── stores/                 # Zustand auth store
+│   │   └── types/                  # TypeScript interfaces
+│   ├── .env.example
+│   ├── .prettierrc
+│   └── package.json
+│
+└── backend/                        # FastAPI + SQLAlchemy
+    ├── app/
+    │   ├── main.py                 # FastAPI app entry point
+    │   ├── core/                   # Config, database, security (JWT)
+    │   ├── models/                 # 8 SQLAlchemy ORM models
+    │   ├── schemas/                # Pydantic request/response schemas
+    │   ├── api/routes/             # 6 route modules (auth, tasks, etc.)
+    │   ├── services/               # Business logic (TODO)
+    │   └── utils/                  # Helpers (TODO)
+    ├── alembic/                    # Database migrations
+    ├── seed/                       # JSON fixtures + seed script
+    ├── tests/                      # Pytest async tests
+    ├── Dockerfile
+    ├── .env.example
+    ├── requirements.txt
+    └── pyproject.toml              # Black, Ruff, MyPy, Pytest config
 ```
 
 ---
