@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     APP_NAME: str = "ISIN API"
     DEBUG: bool = False
     ENVIRONMENT: str = "development"
+    LOG_LEVEL: str = "INFO"
 
     # Database
     DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/isin_db"

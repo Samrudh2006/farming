@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /tasks/
+Disallow: /recruiter/
+
+Sitemap: https://isin.in/sitemap.xml
