@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 600" fill="none">
+  <defs>
+    <linearGradient id="authBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E1B4B"/>
+      <stop offset="100%" style="stop-color:#312E81"/>
+    </linearGradient>
+    <radialGradient id="authGlow" cx="30%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1440" height="600" fill="url(#authBg)"/>
+  <rect width="1440" height="600" fill="url(#authGlow)"/>
+  <!-- Abstract circuit pattern -->
+  <g opacity="0.06" stroke="#818CF8" stroke-width="1">
+    <path d="M0 300 H200 L250 250 H400 L420 270 H600"/>
+    <path d="M600 270 L650 220 H850 L900 270 H1100"/>
+    <path d="M1100 270 L1150 320 H1300 L1350 270 H1440"/>
+    <path d="M100 400 H300 L350 350 H500"/>
+    <path d="M700 150 H900 L950 200 H1200"/>
+    <path d="M200 500 H400 L450 450 H650"/>
+    <path d="M900 400 H1100 L1150 450 H1350"/>
+    <!-- Intersection dots -->
+    <circle cx="250" cy="250" r="3" fill="#818CF8"/>
+    <circle cx="420" cy="270" r="3" fill="#A78BFA"/>
+    <circle cx="650" cy="220" r="3" fill="#818CF8"/>
+    <circle cx="900" cy="270" r="3" fill="#C084FC"/>
+    <circle cx="1150" cy="320" r="3" fill="#818CF8"/>
+    <circle cx="350" cy="350" r="3" fill="#A78BFA"/>
+    <circle cx="950" cy="200" r="3" fill="#818CF8"/>
+  </g>
+</svg>

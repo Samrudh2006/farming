@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 400" fill="none">
+  <defs>
+    <linearGradient id="passBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EEF2FF"/>
+      <stop offset="50%" style="stop-color:#E0E7FF"/>
+      <stop offset="100%" style="stop-color:#F5F3FF"/>
+    </linearGradient>
+    <linearGradient id="passStripe" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#4F46E5;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#4F46E5;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="400" fill="url(#passBg)"/>
+  <!-- Horizontal subtle stripes -->
+  <rect x="0" y="50" width="1440" height="40" fill="url(#passStripe)"/>
+  <rect x="0" y="130" width="1440" height="30" fill="url(#passStripe)"/>
+  <rect x="0" y="220" width="1440" height="50" fill="url(#passStripe)"/>
+  <rect x="0" y="310" width="1440" height="35" fill="url(#passStripe)"/>
+  <!-- Corner decoration -->
+  <g opacity="0.06">
+    <circle cx="0" cy="0" r="200" fill="#4F46E5"/>
+    <circle cx="1440" cy="400" r="180" fill="#7C3AED"/>
+  </g>
+  <!-- Network decoration -->
+  <g opacity="0.05">
+    <circle cx="1300" cy="80" r="6" fill="#6366F1"/>
+    <circle cx="1350" cy="120" r="4" fill="#A78BFA"/>
+    <circle cx="1380" cy="60" r="5" fill="#818CF8"/>
+    <line x1="1300" y1="80" x2="1350" y2="120" stroke="#6366F1" stroke-width="1"/>
+    <line x1="1300" y1="80" x2="1380" y2="60" stroke="#818CF8" stroke-width="1"/>
+    <circle cx="100" cy="320" r="5" fill="#6366F1"/>
+    <circle cx="60" cy="360" r="4" fill="#A78BFA"/>
+    <circle cx="150" cy="370" r="5" fill="#818CF8"/>
+    <line x1="100" y1="320" x2="60" y2="360" stroke="#6366F1" stroke-width="1"/>
+    <line x1="100" y1="320" x2="150" y2="370" stroke="#818CF8" stroke-width="1"/>
+  </g>
+</svg>

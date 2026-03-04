@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" fill="none">
+  <defs>
+    <linearGradient id="ctaBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="50%" style="stop-color:#6D28D9"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="200" fill="url(#ctaBg)"/>
+  <!-- Decorative waves -->
+  <path d="M0 0 Q 360 40, 720 0 T 1440 0 V 200 H 0 Z" fill="white" opacity="0.02"/>
+  <path d="M0 200 Q 360 160, 720 200 T 1440 200 V 0 H 0 Z" fill="white" opacity="0.02"/>
+  <!-- Sparkle dots -->
+  <g opacity="0.15">
+    <circle cx="100" cy="50" r="2" fill="white"/>
+    <circle cx="300" cy="150" r="1.5" fill="white"/>
+    <circle cx="500" cy="80" r="2" fill="white"/>
+    <circle cx="700" cy="130" r="1.5" fill="white"/>
+    <circle cx="900" cy="60" r="2" fill="white"/>
+    <circle cx="1100" cy="140" r="1.5" fill="white"/>
+    <circle cx="1300" cy="70" r="2" fill="white"/>
+    <circle cx="200" cy="120" r="1" fill="white"/>
+    <circle cx="600" cy="40" r="1" fill="white"/>
+    <circle cx="1000" cy="160" r="1" fill="white"/>
+    <circle cx="1400" cy="100" r="1" fill="white"/>
+  </g>
+</svg>

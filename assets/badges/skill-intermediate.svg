@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" fill="none">
+  <rect width="160" height="36" rx="18" fill="#0EA5E9"/>
+  <!-- Circle half -->
+  <circle cx="22" cy="18" r="9" fill="none" stroke="white" stroke-width="2" opacity="0.85"/>
+  <path d="M22 9 A9 9 0 0 1 22 27" fill="white" opacity="0.5"/>
+  <text x="38" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="white">Intermediate</text>
+  <text x="130" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="white" opacity="0.8">60+</text>
+</svg>

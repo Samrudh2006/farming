@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 24" fill="none">
+  <defs>
+    <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="50%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+  </defs>
+  <!-- Track -->
+  <rect x="0" y="4" width="200" height="16" rx="8" fill="#F1F5F9"/>
+  <!-- Fill (75% example) -->
+  <rect x="0" y="4" width="150" height="16" rx="8" fill="url(#progressGrad)"/>
+  <!-- Shine effect -->
+  <rect x="0" y="4" width="150" height="8" rx="8" fill="white" opacity="0.15"/>
+  <!-- Score text -->
+  <text x="140" y="16" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="white">75</text>
+</svg>

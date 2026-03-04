@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 36" fill="none">
+  <rect width="120" height="36" rx="18" fill="#FFFBEB"/>
+  <rect width="120" height="36" rx="18" stroke="#F59E0B" stroke-width="1.5" fill="none"/>
+  <!-- Warning circle -->
+  <circle cx="22" cy="18" r="10" fill="#F59E0B"/>
+  <text x="22" y="22" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">!</text>
+  <!-- Text -->
+  <text x="40" y="15" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#D97706" letter-spacing="0.5">TRUST</text>
+  <text x="40" y="26" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#B45309">Review</text>
+</svg>

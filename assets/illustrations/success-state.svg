@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981" stop-opacity="0.1"/>
+      <stop offset="100%" style="stop-color:#059669" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="successAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="200" cy="120" r="90" fill="url(#successGrad)"/>
+
+  <!-- Large checkmark circle -->
+  <circle cx="200" cy="120" r="55" fill="white" stroke="#10B981" stroke-width="3"/>
+  <circle cx="200" cy="120" r="45" fill="#ECFDF5"/>
+  <path d="M175 120 L192 137 L228 100" stroke="#10B981" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Confetti particles -->
+  <rect x="100" y="60" width="8" height="4" rx="2" fill="#4F46E5" opacity="0.5" transform="rotate(30 104 62)"/>
+  <rect x="290" y="70" width="8" height="4" rx="2" fill="#EC4899" opacity="0.5" transform="rotate(-20 294 72)"/>
+  <rect x="120" y="170" width="6" height="3" rx="1.5" fill="#7C3AED" opacity="0.4" transform="rotate(45 123 172)"/>
+  <rect x="280" y="160" width="6" height="3" rx="1.5" fill="#F59E0B" opacity="0.5" transform="rotate(-30 283 162)"/>
+  <circle cx="140" cy="100" r="3" fill="#6366F1" opacity="0.4"/>
+  <circle cx="260" cy="95" r="2.5" fill="#F472B6" opacity="0.4"/>
+  <circle cx="150" cy="150" r="2" fill="#A78BFA" opacity="0.3"/>
+  <circle cx="250" cy="155" r="3" fill="#10B981" opacity="0.3"/>
+  <!-- Stars -->
+  <polygon points="310,50 312,56 318,56 313,60 315,66 310,62 305,66 307,60 302,56 308,56" fill="#F59E0B" opacity="0.5"/>
+  <polygon points="90,80 91.5,85 97,85 93,88 94,93 90,90 86,93 87,88 83,85 88.5,85" fill="#6366F1" opacity="0.4"/>
+
+  <!-- Text -->
+  <text x="200" y="210" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#059669" text-anchor="middle">Task Completed!</text>
+  <text x="200" y="235" font-family="system-ui, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Your submission has been evaluated.</text>
+  <text x="200" y="252" font-family="system-ui, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">View your updated Skill Passport below.</text>
+
+  <!-- View Passport button -->
+  <rect x="140" y="266" width="120" height="28" rx="14" fill="url(#successAccent)"/>
+  <text x="200" y="284" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="white" text-anchor="middle">View Passport</text>
+</svg>

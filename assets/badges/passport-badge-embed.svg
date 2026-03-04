@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <defs>
+    <linearGradient id="passportBadgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="50%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="50" rx="8" fill="url(#passportBadgeGrad)"/>
+  <!-- Network icon mini -->
+  <g transform="translate(10, 10)">
+    <circle cx="15" cy="15" r="6" fill="white" opacity="0.9"/>
+    <circle cx="5" cy="7" r="3" fill="white" opacity="0.6"/>
+    <circle cx="25" cy="7" r="3" fill="white" opacity="0.6"/>
+    <circle cx="5" cy="23" r="3" fill="white" opacity="0.6"/>
+    <circle cx="25" cy="23" r="3" fill="white" opacity="0.6"/>
+    <line x1="15" y1="15" x2="5" y2="7" stroke="white" stroke-width="0.8" opacity="0.4"/>
+    <line x1="15" y1="15" x2="25" y2="7" stroke="white" stroke-width="0.8" opacity="0.4"/>
+    <line x1="15" y1="15" x2="5" y2="23" stroke="white" stroke-width="0.8" opacity="0.4"/>
+    <line x1="15" y1="15" x2="25" y2="23" stroke="white" stroke-width="0.8" opacity="0.4"/>
+    <circle cx="15" cy="15" r="2.5" fill="url(#passportBadgeGrad)"/>
+  </g>
+  <text x="48" y="22" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="white" opacity="0.8" letter-spacing="1">ISIN VERIFIED</text>
+  <text x="48" y="38" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="white">Skill Passport</text>
+</svg>

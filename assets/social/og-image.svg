@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F0A2A"/>
+      <stop offset="50%" style="stop-color:#1E1B4B"/>
+      <stop offset="100%" style="stop-color:#0F0A2A"/>
+    </linearGradient>
+    <linearGradient id="ogAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="50%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+    <radialGradient id="ogGlow1" cx="30%" cy="40%" r="40%">
+      <stop offset="0%" style="stop-color:#4F46E5" stop-opacity="0.15"/>
+      <stop offset="100%" style="stop-color:#4F46E5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ogGlow2" cx="70%" cy="60%" r="35%">
+      <stop offset="0%" style="stop-color:#EC4899" stop-opacity="0.1"/>
+      <stop offset="100%" style="stop-color:#EC4899" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  <rect width="1200" height="630" fill="url(#ogGlow1)"/>
+  <rect width="1200" height="630" fill="url(#ogGlow2)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.05" stroke="white">
+    <line x1="0" y1="0" x2="0" y2="630" stroke-width="1"/><line x1="60" y1="0" x2="60" y2="630"/><line x1="120" y1="0" x2="120" y2="630"/><line x1="180" y1="0" x2="180" y2="630"/><line x1="240" y1="0" x2="240" y2="630"/><line x1="300" y1="0" x2="300" y2="630"/><line x1="360" y1="0" x2="360" y2="630"/><line x1="420" y1="0" x2="420" y2="630"/><line x1="480" y1="0" x2="480" y2="630"/><line x1="540" y1="0" x2="540" y2="630"/><line x1="600" y1="0" x2="600" y2="630"/><line x1="660" y1="0" x2="660" y2="630"/><line x1="720" y1="0" x2="720" y2="630"/><line x1="780" y1="0" x2="780" y2="630"/><line x1="840" y1="0" x2="840" y2="630"/><line x1="900" y1="0" x2="900" y2="630"/><line x1="960" y1="0" x2="960" y2="630"/><line x1="1020" y1="0" x2="1020" y2="630"/><line x1="1080" y1="0" x2="1080" y2="630"/><line x1="1140" y1="0" x2="1140" y2="630"/><line x1="1200" y1="0" x2="1200" y2="630"/>
+    <line x1="0" y1="60" x2="1200" y2="60"/><line x1="0" y1="120" x2="1200" y2="120"/><line x1="0" y1="180" x2="1200" y2="180"/><line x1="0" y1="240" x2="1200" y2="240"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="360" x2="1200" y2="360"/><line x1="0" y1="420" x2="1200" y2="420"/><line x1="0" y1="480" x2="1200" y2="480"/><line x1="0" y1="540" x2="1200" y2="540"/>
+  </g>
+  <!-- Floating network nodes (right side) -->
+  <g opacity="0.3">
+    <circle cx="900" cy="200" r="40" fill="#4F46E5" opacity="0.3"/>
+    <circle cx="1020" cy="280" r="25" fill="#7C3AED" opacity="0.4"/>
+    <circle cx="850" cy="380" r="30" fill="#EC4899" opacity="0.25"/>
+    <circle cx="1080" cy="150" r="18" fill="#818CF8" opacity="0.35"/>
+    <circle cx="980" cy="420" r="22" fill="#A78BFA" opacity="0.3"/>
+    <circle cx="1100" cy="380" r="15" fill="#F472B6" opacity="0.3"/>
+    <line x1="900" y1="200" x2="1020" y2="280" stroke="#818CF8" stroke-width="1.5" opacity="0.3"/>
+    <line x1="1020" y1="280" x2="850" y2="380" stroke="#A78BFA" stroke-width="1" opacity="0.25"/>
+    <line x1="900" y1="200" x2="1080" y2="150" stroke="#818CF8" stroke-width="1" opacity="0.2"/>
+    <line x1="1020" y1="280" x2="980" y2="420" stroke="#C084FC" stroke-width="1" opacity="0.2"/>
+    <line x1="850" y1="380" x2="980" y2="420" stroke="#F472B6" stroke-width="1" opacity="0.2"/>
+    <line x1="1080" y1="150" x2="1100" y2="380" stroke="#A78BFA" stroke-width="0.8" opacity="0.15"/>
+    <line x1="1100" y1="380" x2="980" y2="420" stroke="#EC4899" stroke-width="0.8" opacity="0.15"/>
+  </g>
+  <!-- Top gradient line -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#ogAccent)"/>
+  <!-- Logo icon -->
+  <g transform="translate(80, 170)">
+    <circle cx="30" cy="30" r="30" fill="url(#ogAccent)" opacity="0.2"/>
+    <circle cx="30" cy="30" r="10" fill="white" opacity="0.9"/>
+    <circle cx="12" cy="12" r="5" fill="white" opacity="0.5"/>
+    <circle cx="48" cy="12" r="5" fill="white" opacity="0.5"/>
+    <circle cx="12" cy="48" r="5" fill="white" opacity="0.5"/>
+    <circle cx="48" cy="48" r="5" fill="white" opacity="0.5"/>
+    <line x1="30" y1="30" x2="12" y2="12" stroke="white" stroke-width="1.5" opacity="0.4"/>
+    <line x1="30" y1="30" x2="48" y2="12" stroke="white" stroke-width="1.5" opacity="0.4"/>
+    <line x1="30" y1="30" x2="12" y2="48" stroke="white" stroke-width="1.5" opacity="0.4"/>
+    <line x1="30" y1="30" x2="48" y2="48" stroke="white" stroke-width="1.5" opacity="0.4"/>
+  </g>
+  <!-- Title -->
+  <text x="80" y="280" font-family="system-ui, sans-serif" font-size="56" font-weight="800" fill="white" letter-spacing="-1">
+    <tspan>India's Skill</tspan>
+    <tspan x="80" dy="65">Intelligence Network</tspan>
+  </text>
+  <!-- Tagline -->
+  <text x="80" y="400" font-family="system-ui, sans-serif" font-size="22" fill="#A78BFA" font-weight="400">
+    AI-Verified Skill Passports. Not Resumes.
+  </text>
+  <!-- Bottom accent -->
+  <rect x="80" y="430" width="120" height="4" rx="2" fill="url(#ogAccent)"/>
+  <!-- Bottom bar -->
+  <rect x="0" y="590" width="1200" height="40" fill="url(#ogAccent)" opacity="0.15"/>
+  <text x="80" y="616" font-family="system-ui, sans-serif" font-size="16" fill="#818CF8" font-weight="500">isin.dev</text>
+  <text x="1120" y="616" font-family="system-ui, sans-serif" font-size="14" fill="#64748B" text-anchor="end">Prove Skills. Get Hired.</text>
+</svg>

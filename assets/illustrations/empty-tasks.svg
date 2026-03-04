@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <defs>
+    <linearGradient id="emptyIllGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5" stop-opacity="0.1"/>
+      <stop offset="100%" style="stop-color:#7C3AED" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Large background circle -->
+  <circle cx="200" cy="130" r="100" fill="url(#emptyIllGrad)"/>
+
+  <!-- Empty clipboard -->
+  <rect x="145" y="60" width="110" height="140" rx="12" fill="white" stroke="#C7D2FE" stroke-width="2"/>
+  <!-- Clipboard top -->
+  <rect x="175" y="50" width="50" height="20" rx="6" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+  <circle cx="200" cy="60" r="3" fill="#A5B4FC"/>
+
+  <!-- Empty lines -->
+  <rect x="165" y="95" width="70" height="6" rx="3" fill="#E0E7FF"/>
+  <rect x="165" y="112" width="50" height="6" rx="3" fill="#EEF2FF"/>
+  <rect x="165" y="129" width="60" height="6" rx="3" fill="#EEF2FF"/>
+  <rect x="165" y="146" width="40" height="6" rx="3" fill="#F5F3FF"/>
+
+  <!-- Question marks floating -->
+  <text x="120" y="100" font-family="system-ui, sans-serif" font-size="24" fill="#C7D2FE" font-weight="300">?</text>
+  <text x="280" y="90" font-family="system-ui, sans-serif" font-size="18" fill="#DDD6FE" font-weight="300">?</text>
+  <text x="100" y="170" font-family="system-ui, sans-serif" font-size="16" fill="#E0E7FF" font-weight="300">?</text>
+
+  <!-- Dots -->
+  <circle cx="130" cy="130" r="3" fill="#C7D2FE" opacity="0.5"/>
+  <circle cx="280" cy="150" r="4" fill="#DDD6FE" opacity="0.4"/>
+  <circle cx="300" cy="110" r="2" fill="#FBCFE8" opacity="0.5"/>
+
+  <!-- Text -->
+  <text x="200" y="235" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#4F46E5" text-anchor="middle">No Tasks Yet</text>
+  <text x="200" y="258" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Start your first skill assessment to</text>
+  <text x="200" y="275" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">begin building your Skill Passport</text>
+</svg>

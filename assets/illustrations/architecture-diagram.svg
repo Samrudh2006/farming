@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" fill="none">
+  <defs>
+    <linearGradient id="archPrimary" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="archSecondary" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+    <linearGradient id="archAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0EA5E9"/>
+      <stop offset="100%" style="stop-color:#6366F1"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1E1B4B" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#FAFBFF"/>
+
+  <!-- Title -->
+  <text x="500" y="40" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#1E1B4B" text-anchor="middle">ISIN System Architecture</text>
+  <rect x="420" y="48" width="160" height="3" rx="1.5" fill="url(#archPrimary)"/>
+
+  <!-- ==================== LAYER 1: Client ==================== -->
+  <text x="30" y="90" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" letter-spacing="2">CLIENT</text>
+
+  <!-- Browser -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="100" width="180" height="70" rx="10" fill="white" stroke="#C7D2FE" stroke-width="1.5"/>
+    <rect x="60" y="100" width="180" height="4" rx="2" fill="url(#archPrimary)"/>
+    <text x="150" y="130" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#4F46E5" text-anchor="middle">Next.js 14 App</text>
+    <text x="150" y="148" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">React · Tailwind · Monaco Editor</text>
+    <text x="150" y="162" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">shadcn/ui · Zustand</text>
+  </g>
+
+  <!-- Candidate Portal -->
+  <g filter="url(#shadow)">
+    <rect x="300" y="100" width="160" height="70" rx="10" fill="white" stroke="#C7D2FE" stroke-width="1.5"/>
+    <rect x="300" y="100" width="160" height="4" rx="2" fill="url(#archPrimary)"/>
+    <text x="380" y="130" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#4F46E5" text-anchor="middle">Candidate Portal</text>
+    <text x="380" y="148" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Skill Tasks · Code Editor</text>
+    <text x="380" y="162" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Passport View · Dashboard</text>
+  </g>
+
+  <!-- Recruiter Portal -->
+  <g filter="url(#shadow)">
+    <rect x="520" y="100" width="160" height="70" rx="10" fill="white" stroke="#DDD6FE" stroke-width="1.5"/>
+    <rect x="520" y="100" width="160" height="4" rx="2" fill="url(#archSecondary)"/>
+    <text x="600" y="130" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#7C3AED" text-anchor="middle">Recruiter Portal</text>
+    <text x="600" y="148" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Search · Filter · Shortlist</text>
+    <text x="600" y="162" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Analytics · Bulk Actions</text>
+  </g>
+
+  <!-- Admin -->
+  <g filter="url(#shadow)">
+    <rect x="740" y="100" width="150" height="70" rx="10" fill="white" stroke="#FBCFE8" stroke-width="1.5"/>
+    <rect x="740" y="100" width="150" height="4" rx="2" fill="url(#archSecondary)"/>
+    <text x="815" y="130" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#EC4899" text-anchor="middle">Admin Panel</text>
+    <text x="815" y="148" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Monitoring · Users</text>
+    <text x="815" y="162" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Task Management</text>
+  </g>
+
+  <!-- ==================== Arrows Client → API ==================== -->
+  <line x1="150" y1="170" x2="150" y2="220" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="380" y1="170" x2="380" y2="220" stroke="#4F46E5" stroke-width="2"/>
+  <line x1="600" y1="170" x2="600" y2="220" stroke="#7C3AED" stroke-width="2"/>
+  <line x1="815" y1="170" x2="815" y2="220" stroke="#EC4899" stroke-width="2"/>
+
+  <text x="500" y="205" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">HTTPS / REST API / JWT Auth</text>
+
+  <!-- ==================== LAYER 2: API Gateway / Backend ==================== -->
+  <text x="30" y="240" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" letter-spacing="2">BACKEND</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="250" width="830" height="90" rx="12" fill="white" stroke="#C7D2FE" stroke-width="1.5"/>
+    <rect x="60" y="250" width="830" height="5" rx="2.5" fill="url(#archPrimary)"/>
+
+    <text x="480" y="275" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#4F46E5" text-anchor="middle">FastAPI Python Backend (Monolith)</text>
+
+    <!-- Modules -->
+    <rect x="80" y="288" width="120" height="40" rx="6" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+    <text x="140" y="313" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#4F46E5" text-anchor="middle">Auth Module</text>
+
+    <rect x="215" y="288" width="130" height="40" rx="6" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+    <text x="280" y="313" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#4F46E5" text-anchor="middle">Task Engine</text>
+
+    <rect x="360" y="288" width="130" height="40" rx="6" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+    <text x="425" y="313" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#7C3AED" text-anchor="middle">Eval Pipeline</text>
+
+    <rect x="505" y="288" width="120" height="40" rx="6" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+    <text x="565" y="313" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#7C3AED" text-anchor="middle">Skill Scorer</text>
+
+    <rect x="640" y="288" width="115" height="40" rx="6" fill="#FDF2F8" stroke="#FBCFE8" stroke-width="1"/>
+    <text x="698" y="313" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#EC4899" text-anchor="middle">Anti-Cheat</text>
+
+    <rect x="770" y="288" width="105" height="40" rx="6" fill="#FDF2F8" stroke="#FBCFE8" stroke-width="1"/>
+    <text x="823" y="313" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#EC4899" text-anchor="middle">Search API</text>
+  </g>
+
+  <!-- ==================== Arrows Backend → Services ==================== -->
+  <line x1="280" y1="340" x2="200" y2="410" stroke="#4F46E5" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="425" y1="340" x2="400" y2="410" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="565" y1="340" x2="600" y2="410" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="698" y1="340" x2="780" y2="410" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="4"/>
+
+  <!-- ==================== LAYER 3: External Services ==================== -->
+  <text x="30" y="400" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" letter-spacing="2">SERVICES</text>
+
+  <!-- Code Sandbox -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="415" width="180" height="65" rx="10" fill="white" stroke="#BAE6FD" stroke-width="1.5"/>
+    <rect x="80" y="415" width="180" height="4" rx="2" fill="url(#archAccent)"/>
+    <text x="170" y="445" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0EA5E9" text-anchor="middle">Judge0 Sandbox</text>
+    <text x="170" y="462" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Docker · Code Execution</text>
+    <text x="170" y="475" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Timeout · Memory Limits</text>
+  </g>
+
+  <!-- AI / LLM -->
+  <g filter="url(#shadow)">
+    <rect x="300" y="415" width="180" height="65" rx="10" fill="white" stroke="#DDD6FE" stroke-width="1.5"/>
+    <rect x="300" y="415" width="180" height="4" rx="2" fill="url(#archSecondary)"/>
+    <text x="390" y="445" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#7C3AED" text-anchor="middle">OpenAI GPT-4o-mini</text>
+    <text x="390" y="462" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Task Generation · Eval</text>
+    <text x="390" y="475" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">~₹0.42/candidate</text>
+  </g>
+
+  <!-- Database -->
+  <g filter="url(#shadow)">
+    <rect x="520" y="415" width="180" height="65" rx="10" fill="white" stroke="#C7D2FE" stroke-width="1.5"/>
+    <rect x="520" y="415" width="180" height="4" rx="2" fill="url(#archPrimary)"/>
+    <text x="610" y="445" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#4F46E5" text-anchor="middle">PostgreSQL 15</text>
+    <text x="610" y="462" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">10 Tables · Indexes</text>
+    <text x="610" y="475" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Railway Managed</text>
+  </g>
+
+  <!-- Behavior Tracking -->
+  <g filter="url(#shadow)">
+    <rect x="740" y="415" width="180" height="65" rx="10" fill="white" stroke="#FBCFE8" stroke-width="1.5"/>
+    <rect x="740" y="415" width="180" height="4" rx="2" fill="#F472B6"/>
+    <text x="830" y="445" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#EC4899" text-anchor="middle">Behavior Engine</text>
+    <text x="830" y="462" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">5-Signal Detection</text>
+    <text x="830" y="475" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Trust Score · Anti-Cheat</text>
+  </g>
+
+  <!-- ==================== LAYER 4: Data Flow ==================== -->
+  <text x="30" y="520" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" letter-spacing="2">DATA FLOW</text>
+
+  <!-- Pipeline flow -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="535" width="880" height="55" rx="10" fill="#FAFBFF" stroke="#E2E8F0" stroke-width="1"/>
+
+    <!-- Step 1 -->
+    <rect x="75" y="545" width="120" height="35" rx="6" fill="#EEF2FF"/>
+    <text x="135" y="567" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#4F46E5" text-anchor="middle">1. Generate Task</text>
+
+    <!-- Arrow -->
+    <text x="205" y="567" font-family="system-ui, sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">→</text>
+
+    <!-- Step 2 -->
+    <rect x="220" y="545" width="120" height="35" rx="6" fill="#EEF2FF"/>
+    <text x="280" y="567" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#4F46E5" text-anchor="middle">2. Code + Submit</text>
+
+    <text x="350" y="567" font-family="system-ui, sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">→</text>
+
+    <!-- Step 3 -->
+    <rect x="365" y="545" width="130" height="35" rx="6" fill="#F5F3FF"/>
+    <text x="430" y="567" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#7C3AED" text-anchor="middle">3. Sandbox + AI Eval</text>
+
+    <text x="505" y="567" font-family="system-ui, sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">→</text>
+
+    <!-- Step 4 -->
+    <rect x="520" y="545" width="120" height="35" rx="6" fill="#F5F3FF"/>
+    <text x="580" y="567" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#7C3AED" text-anchor="middle">4. Score + Trust</text>
+
+    <text x="650" y="567" font-family="system-ui, sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">→</text>
+
+    <!-- Step 5 -->
+    <rect x="665" y="545" width="130" height="35" rx="6" fill="#FDF2F8"/>
+    <text x="730" y="567" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#EC4899" text-anchor="middle">5. Skill Passport</text>
+
+    <text x="805" y="567" font-family="system-ui, sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">→</text>
+
+    <!-- Step 6 -->
+    <rect x="820" y="545" width="105" height="35" rx="6" fill="#ECFDF5"/>
+    <text x="873" y="567" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#10B981" text-anchor="middle">6. Get Hired</text>
+  </g>
+
+  <!-- ==================== LAYER 5: Infrastructure ==================== -->
+  <text x="30" y="625" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94A3B8" letter-spacing="2">HOSTING</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="635" width="180" height="40" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="150" y="660" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1E1B4B" text-anchor="middle">Vercel (Frontend)</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="280" y="635" width="180" height="40" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="370" y="660" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1E1B4B" text-anchor="middle">Railway (Backend + DB)</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="500" y="635" width="180" height="40" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="590" y="660" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1E1B4B" text-anchor="middle">Judge0 (Sandbox)</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="720" y="635" width="220" height="40" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="830" y="660" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#1E1B4B" text-anchor="middle">OpenAI API (External)</text>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 36" fill="none">
+  <rect width="120" height="36" rx="18" fill="#FEF2F2"/>
+  <rect width="120" height="36" rx="18" stroke="#EF4444" stroke-width="1.5" fill="none"/>
+  <!-- X circle -->
+  <circle cx="22" cy="18" r="10" fill="#EF4444"/>
+  <line x1="17" y1="13" x2="27" y2="23" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="27" y1="13" x2="17" y2="23" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="40" y="15" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#DC2626" letter-spacing="0.5">TRUST</text>
+  <text x="40" y="26" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#B91C1C">Flagged</text>
+</svg>

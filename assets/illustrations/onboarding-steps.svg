@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240" fill="none">
+  <defs>
+    <linearGradient id="step1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/><stop offset="100%" style="stop-color:#6366F1"/>
+    </linearGradient>
+    <linearGradient id="step2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED"/><stop offset="100%" style="stop-color:#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="step3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EC4899"/><stop offset="100%" style="stop-color:#F472B6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Step 1: Code -->
+  <g transform="translate(20, 30)">
+    <circle cx="60" cy="50" r="50" fill="url(#step1Grad)" opacity="0.08"/>
+    <rect x="30" y="25" width="60" height="50" rx="8" fill="white" stroke="#C7D2FE" stroke-width="1.5"/>
+    <!-- Code lines -->
+    <rect x="38" y="34" width="20" height="3" rx="1.5" fill="#4F46E5" opacity="0.6"/>
+    <rect x="38" y="41" width="35" height="3" rx="1.5" fill="#818CF8" opacity="0.4"/>
+    <rect x="38" y="48" width="28" height="3" rx="1.5" fill="#A78BFA" opacity="0.3"/>
+    <rect x="38" y="55" width="40" height="3" rx="1.5" fill="#818CF8" opacity="0.4"/>
+    <rect x="38" y="62" width="15" height="3" rx="1.5" fill="#4F46E5" opacity="0.6"/>
+    <!-- Number -->
+    <circle cx="60" cy="95" r="14" fill="url(#step1Grad)"/>
+    <text x="60" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">1</text>
+    <text x="60" y="130" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1E1B4B" text-anchor="middle">Solve Tasks</text>
+    <text x="60" y="148" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Real-world Python</text>
+    <text x="60" y="160" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">coding challenges</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <line x1="140" y1="80" x2="180" y2="80" stroke="#C7D2FE" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="178,76 186,80 178,84" fill="#C7D2FE"/>
+
+  <!-- Step 2: AI Eval -->
+  <g transform="translate(180, 30)">
+    <circle cx="70" cy="50" r="50" fill="url(#step2Grad)" opacity="0.08"/>
+    <!-- Brain/AI icon -->
+    <circle cx="70" cy="45" r="22" fill="white" stroke="#DDD6FE" stroke-width="1.5"/>
+    <path d="M60 40 Q65 30 70 40 Q75 30 80 40" stroke="url(#step2Grad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M58 48 Q64 55 70 48 Q76 55 82 48" stroke="url(#step2Grad)" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="65" cy="44" r="2" fill="url(#step2Grad)"/>
+    <circle cx="75" cy="44" r="2" fill="url(#step2Grad)"/>
+    <!-- Number -->
+    <circle cx="70" cy="95" r="14" fill="url(#step2Grad)"/>
+    <text x="70" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">2</text>
+    <text x="70" y="130" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1E1B4B" text-anchor="middle">AI Evaluates</text>
+    <text x="70" y="148" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">GPT-4o-mini reviews</text>
+    <text x="70" y="160" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">code quality + logic</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <line x1="310" y1="80" x2="350" y2="80" stroke="#C7D2FE" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="348,76 356,80 348,84" fill="#C7D2FE"/>
+
+  <!-- Step 3: Passport -->
+  <g transform="translate(350, 30)">
+    <circle cx="70" cy="50" r="50" fill="url(#step3Grad)" opacity="0.08"/>
+    <!-- Passport card -->
+    <rect x="42" y="28" width="56" height="40" rx="6" fill="white" stroke="#FBCFE8" stroke-width="1.5"/>
+    <rect x="42" y="28" width="56" height="12" rx="6" fill="url(#step3Grad)" opacity="0.7"/>
+    <rect x="42" y="37" width="56" height="3" fill="url(#step3Grad)" opacity="0.7"/>
+    <text x="70" y="37" font-family="system-ui, sans-serif" font-size="6" font-weight="700" fill="white" text-anchor="middle">PASSPORT</text>
+    <!-- Score -->
+    <text x="70" y="57" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#EC4899" text-anchor="middle">82</text>
+    <!-- Verified checkmark -->
+    <circle cx="90" cy="60" r="5" fill="#10B981"/>
+    <path d="M87 60 L89 62 L93 57" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <!-- Number -->
+    <circle cx="70" cy="95" r="14" fill="url(#step3Grad)"/>
+    <text x="70" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">3</text>
+    <text x="70" y="130" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1E1B4B" text-anchor="middle">Get Passport</text>
+    <text x="70" y="148" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">Shareable verified</text>
+    <text x="70" y="160" font-family="system-ui, sans-serif" font-size="9" fill="#94A3B8" text-anchor="middle">skill credential</text>
+  </g>
+</svg>

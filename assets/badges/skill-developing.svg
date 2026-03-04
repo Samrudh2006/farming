@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" fill="none">
+  <rect width="160" height="36" rx="18" fill="#F59E0B"/>
+  <!-- Seedling -->
+  <path d="M22 26 L22 18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M22 18 Q18 14 22 10 Q26 14 22 18" fill="white" opacity="0.85"/>
+  <text x="38" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="white">Developing</text>
+  <text x="125" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="white" opacity="0.8">40+</text>
+</svg>

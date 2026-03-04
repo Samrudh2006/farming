@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="lightBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC"/>
+      <stop offset="50%" style="stop-color:#EEF2FF"/>
+      <stop offset="100%" style="stop-color:#FDF2F8"/>
+    </linearGradient>
+    <radialGradient id="lightGlow1" cx="15%" cy="25%" r="35%">
+      <stop offset="0%" style="stop-color:#C7D2FE;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#C7D2FE;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="lightGlow2" cx="85%" cy="75%" r="30%">
+      <stop offset="0%" style="stop-color:#FBCFE8;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#FBCFE8;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#lightBg)"/>
+  <rect width="1440" height="900" fill="url(#lightGlow1)"/>
+  <rect width="1440" height="900" fill="url(#lightGlow2)"/>
+  <!-- Dot grid pattern -->
+  <g opacity="0.15">
+    <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="#6366F1"/>
+    </pattern>
+    <rect width="1440" height="900" fill="url(#dots)"/>
+  </g>
+  <!-- Decorative floating shapes -->
+  <circle cx="200" cy="200" r="150" fill="#6366F1" opacity="0.03"/>
+  <circle cx="1200" cy="650" r="180" fill="#EC4899" opacity="0.03"/>
+  <circle cx="720" cy="450" r="250" fill="#8B5CF6" opacity="0.02"/>
+  <!-- Floating nodes -->
+  <g opacity="0.08">
+    <circle cx="300" cy="180" r="5" fill="#6366F1"/>
+    <circle cx="450" cy="320" r="4" fill="#A78BFA"/>
+    <circle cx="800" cy="150" r="5" fill="#818CF8"/>
+    <circle cx="1100" cy="280" r="4" fill="#F472B6"/>
+    <circle cx="600" cy="700" r="5" fill="#8B5CF6"/>
+    <circle cx="950" cy="600" r="4" fill="#EC4899"/>
+    <line x1="300" y1="180" x2="450" y2="320" stroke="#6366F1" stroke-width="1"/>
+    <line x1="800" y1="150" x2="1100" y2="280" stroke="#818CF8" stroke-width="1"/>
+  </g>
+</svg>

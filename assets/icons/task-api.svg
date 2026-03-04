@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="apiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="#EEF2FF"/>
+  <!-- API arrows -->
+  <path d="M12 24 L20 24" stroke="url(#apiGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M28 24 L36 24" stroke="url(#apiGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="20,20 28,24 20,28" fill="url(#apiGrad)" opacity="0.9"/>
+  <!-- Braces -->
+  <path d="M8 16 Q11 16 11 20 Q11 23 14 24 Q11 25 11 28 Q11 32 8 32" stroke="url(#apiGrad)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M40 16 Q37 16 37 20 Q37 23 34 24 Q37 25 37 28 Q37 32 40 32" stroke="url(#apiGrad)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Arrow heads -->
+  <polygon points="34,22 36,24 34,26" fill="url(#apiGrad)"/>
+  <text x="24" y="44" font-family="system-ui, sans-serif" font-size="5" font-weight="600" fill="#4F46E5" text-anchor="middle">API</text>
+</svg>
